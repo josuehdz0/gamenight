@@ -1,5 +1,6 @@
 import { appState } from "../AppState.js";
 import { playersService } from "../Services/playerServices.js";
+import { getFormData } from "../Utils/FormHandler.js";
 
 
 
@@ -14,6 +15,13 @@ export class PlayersController{
     document.getElementById('players').innerHTML = names
   }
 
+  addPlayer(){
+    window.event.preventDefault()
+    const form = window.event.target
+    let playerData = getFormData(form)
+    playersService.createPlayer(playerData);
+    this.drawPlayers()
+  }
 
   plusPoint(name){
     playersService.addPoint(name)

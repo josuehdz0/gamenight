@@ -32,7 +32,7 @@
   </style>
 </head>
 
-<body class="debug">
+<body class="">
   <header class="navbar navbar-dark navbar-expand bg-dark text-light no-select d-flex justify-content-center">
     <h1 class="text-center">GAMENIGHT</h1>
 
@@ -40,15 +40,43 @@
   <main>
     <div class="container-fluid">
       <div id="players">
-        <div class="row justify-content-center pt-2">
-          <h2 class="col-2 text-end">🐨</h2>
-          <h2 class="col-3 text-start">Timmy</h2>
-          <h2 class="col-4 text-center">
-            <i class="mdi mdi-minus-circle-outline" onclick=""></i> 10 <i class="mdi mdi-plus-circle-outline"
-              onclick="app.playersController.plusPoint('${this.name}')"></i>
-          </h2>
-        </div>
+        <!-- <div class="row card m-3">
+          <div class="d-flex justify-content-center pt-2 ">
+            <h2 class="col-2 text-center">🫠</h2>
+            <h2 class="col-4 text-start">Timmy</h2>
+            <h2 class="col-4 text-center">
+              <i class="mdi mdi-minus-circle-outline" onclick="app.playersController.minusPoint('${this.name}')"></i> 10
+              <i class="mdi mdi-plus-circle-outline" onclick="app.playersController.plusPoint('${this.name}')"></i>
+            </h2>
+          </div>
+        </div> -->
       </div>
+      <h2 class="text-center pt-3">NEW PLAYER?</h2>
+
+      <div class="card p-3">
+        <form class="row justify-content-center pt-2" onsubmit="app.playersController.addPlayer()">
+          <h2 class="col-3 text-center">
+            <label for="emoji">Emoji</label>
+            <input class="form-control text-center" type="text" name="emoji" id="emoji" placeholder="🫠">
+          </h2>
+          <h2 class="col-3 text-center">
+            <label for="name">Name</label>
+            <input class="form-control text-center" type="text" name="name" id="name" placeholder="name">
+          </h2>
+          <h2 class="col-3 text-center">
+            <label for="name">Score</label>
+            <input class="form-control text-center" type="number" name="score" id="score" placeholder="0">
+          </h2>
+          <div class="col-5 d-flex justify-content-center">
+
+            <button class="btn btn-dark mt-2">ADD PLAYER</button>
+
+          </div>
+        </form>
+
+
+      </div>
+
     </div>
   </main>
   <footer class="bg-dark text-light">

@@ -1,7 +1,7 @@
 export class Player{
   constructor(name, emoji, score){
-    this.name = name
     this.emoji = emoji
+    this.name = name
     this.score = score
   }
 
@@ -24,13 +24,17 @@ export class Player{
 
   get HTMLTemplate() {
     return `
-    <div class="row justify-content-center pt-2">
-          <h2 class="col-2 text-end">${this.emoji}</h2>
-          <h2 class="col-3 text-start">${this.name}</h2>
+    
+
+      <div class="row card m-3">
+        <div class="d-flex justify-content-center pt-2 ">
+          <h2 class="col-2 text-center">${this.emoji}</h2>
+          <h2 class="col-4 text-start">${this.name}</h2>
           <h2 class="col-4 text-center">
-            <i class="mdi mdi-minus-circle-outline" onclick="app.playersController.minusPoint('${this.name}')"></i> ${this.score} <i class="mdi mdi-plus-circle-outline" onclick="app.playersController.plusPoint('${this.name}')"></i>
+          <i class="mdi mdi-minus-circle-outline" onclick="app.playersController.minusPoint('${this.name}')"></i> ${this.score} <i class="mdi mdi-plus-circle-outline" onclick="app.playersController.plusPoint('${this.name}')"></i>
           </h2>
         </div>
+      </div>
     `
   }
 
