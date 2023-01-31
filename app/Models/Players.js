@@ -2,7 +2,7 @@ export class Player{
   constructor(name, emoji, score){
     this.emoji = emoji
     this.name = name
-    this.score = score
+    this.score = parseInt(score)
   }
 
 
