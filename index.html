@@ -33,22 +33,21 @@
 </head>
 
 <body class="debug">
-  <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
-      <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2 ">GAMENIGHT</span>
-      </a>
-    </nav>
+  <header class="navbar navbar-dark navbar-expand bg-dark text-light no-select d-flex justify-content-center">
+    <h1 class="text-center">GAMENIGHT</h1>
+
   </header>
   <main>
     <div class="container-fluid">
-      <div class="row justify-content-center pt-2">
-        <h2 class="col-2 text-end">🐨</h2>
-        <h2 class="col-3 text-start">Timmy</h2>
-        <h2 class="col-3 text-center">10</h2>
-
+      <div id="players">
+        <div class="row justify-content-center pt-2">
+          <h2 class="col-2 text-end">🐨</h2>
+          <h2 class="col-3 text-start">Timmy</h2>
+          <h2 class="col-4 text-center">
+            <i class="mdi mdi-minus-circle-outline" onclick=""></i> 10 <i class="mdi mdi-plus-circle-outline"
+              onclick="app.playersController.plusPoint('${this.name}')"></i>
+          </h2>
+        </div>
       </div>
     </div>
   </main>
